@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "ru606BW87Jc=",
+  "dgSpecHash": "lcSslPlQoj4=",
   "success": true,
   "projectFilePath": "/Users/katherinequispearias/Desktop/DESARROLLO /BLAZOR/BlazorApp1/BlazorApp1.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/katherinequispearias/.nuget/packages/microsoft.netcore.app.ref/8.0.4/microsoft.netcore.app.ref.8.0.4.nupkg.sha512",
+    "/Users/katherinequispearias/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.4/microsoft.aspnetcore.app.ref.8.0.4.nupkg.sha512",
+    "/Users/katherinequispearias/.nuget/packages/microsoft.netcore.app.host.osx-x64/8.0.4/microsoft.netcore.app.host.osx-x64.8.0.4.nupkg.sha512"
+  ],
   "logs": []
 }
