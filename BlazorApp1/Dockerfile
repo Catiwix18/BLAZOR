@@ -1,22 +1,19 @@
-# Etapa 1: Compilar la aplicación
+# Build stage
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build-env
 WORKDIR /app
 
-# Copiar los archivos del proyecto y restaurar las dependencias
+# Copia el archivo .csproj y restaura las dependencias
 COPY *.csproj ./
 RUN dotnet restore
 
-# Copiar el resto de los archivos y compilar
+# Copia el resto del código y compila la aplicación
 COPY . ./
 RUN dotnet publish -c Release -o out
 
-# Etapa 2: Crear la imagen final
+# Runtime stage
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
 COPY --from=build-env /app/out .
 
-# Exponer el puerto
-EXPOSE 80
-
-# Ejecutar la aplicación
+# Comando para ejecutar la aplicación
 ENTRYPOINT ["dotnet", "BlazorApp.dll"]
